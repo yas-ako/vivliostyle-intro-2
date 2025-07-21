@@ -17,19 +17,19 @@
 
 ※実装途中のため、画像は仮のものです。現在使えない機能が含まれているかもしれません。
 
-![](/assets/report-sample/report-sample_01.jpg){style="border:3px solid ###bbb"}
+![](../assets/report-sample/report-sample_01.jpg){style="border:3px solid ###bbb"}
 
 ### つくったもの
 
-![](/assets/report-sample/report-sample_02.jpg){style="border:3px solid ###bbb"}
+![](../assets/report-sample/report-sample_02.jpg){style="border:3px solid ###bbb"}
 
 ### つくったもの
 
-![](/assets/report-sample/report-sample_03.jpg){style="border:3px solid ###bbb"}
+![](../assets/report-sample/report-sample_03.jpg){style="border:3px solid ###bbb"}
 
 ### つくったもの
 
-![](/assets/report-sample/report-sample_04.jpg){style="border:3px solid ###bbb"}
+![](../assets/report-sample/report-sample_04.jpg){style="border:3px solid ###bbb"}
 
 ### 図・表の挿入/参照
 
@@ -86,7 +86,7 @@ $$
 
 <!-- ### 紙面の余白 -->
 
-![](/assets/report-sample/css-paged-media-test.jpg)
+![](../assets/report-sample/css-paged-media-test.jpg)
 
 ### カウンタ変数の定義
 
@@ -101,7 +101,7 @@ $$
   div 要素で囲んで実現
 - 見出し要素がある時は、見出しの部分の背景を白にする
 
-![](/assets/report-sample/report-sample_03.jpg){style="border:3px solid ###bbb"}
+![](../assets/report-sample/report-sample_03.jpg){style="border:3px solid ###bbb"}
 
 
 ### 今後やってみたいこと
