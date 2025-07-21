@@ -9,16 +9,16 @@ module.exports = {
   theme: ['@yas-ako/vivliostyle-theme-enhanced-slide@^0.1.1',
     'style.css',
   ], // .css or local dir or npm package. default to undefined.
-  // entryContext: 'entry/',
+  entryContext: 'entry/',
   entry: [
-    // '_title.md',
-    // 'chapter1.md',
-    // 'chapter2.md',
-    // 'chapter3.md',
-    // 'chapter4.md',
-    // 'chapter5.md',
-    // 'chapter6.md',
-    'manuscript.md', // `title` is automatically guessed from the file (frontmatter > first heading).
+    '_title.md',
+    'chapter1.md',
+    'chapter2.md',
+    'chapter3.md',
+    'chapter4.md',
+    'chapter5.md',
+    'chapter6.md',
+    // 'manuscript.md', // `title` is automatically guessed from the file (frontmatter > first heading).
     // {
     //   path: 'epigraph.md',
     //   title: 'Epigraph', // title can be overwritten (entry > file),
