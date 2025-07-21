@@ -1,4 +1,4 @@
-## CSS のカスタマイズの例{style="font-size: 2.7em"}
+## CSS のカスタマイズの例{style="font-size: 2.7em" #chapter4}
 
 ##
 
@@ -56,3 +56,17 @@ module.exports = {
   --vs--heading-font-weight: 700;
 }
 ```
+
+### Vivliostyle Base Theme とは
+
+- 様々なテーマで共通して使われる、基本的なスタイルを定義したテーマ
+- Vivliostyle のテーマは、これを継承することが推奨されている
+- 図・表・セクション番号のカウンタやその参照など、Vivliostyle Base Theme で定義されているCSS変数をカスタマイズすることで、簡単にカスタマイズが可能！！
+- いま使ったAcademic テーマも、Vivliostyle Base Theme を内部で使用している。
+
+### 自分でカスタマイズするには....
+
+- 頑張ってBase Theme のソースコードを読んでください。
+- GitHub リポジトリの Issue や Pull Request を検索してください。
+
+かなり拡張性が高いため、CSS変数を上書きするだけでいろいろなことができます。

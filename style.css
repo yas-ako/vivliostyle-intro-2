@@ -1,5 +1,6 @@
 :root {
   --vs--h3-font-size: 2em;
+  --vs-theme--page-ref-call-content: '(p.' target-counter(attr(href url), page) ')';
 }
 
 ul {
@@ -32,16 +33,11 @@ pre[class*="language-"] {
   font-size: 0.8em;
 }
 
-section:has(> h3:only-of-type+p:last-child>img:only-of-type) {
+section:has(h3:not(.image-right, .image-left, .columns-2, .columns-3)):has(> p > img) {
   display: flex;
-  /* align-items: center; */
 }
 
-section>h3:only-of-type+p:last-child>img:only-of-type {
-  max-height: 7;
-}
-
-section>h3:only-of-type+p:last-child:has(> img:first-child:last-child) {
+section:has(h3:not(.image-right, .image-left, .columns-2, .columns-3))>p:has(> img) {
   /* imgを囲むp要素にflex-growを適用 */
   flex-grow: 1;
   /* 残りのスペースをすべて占める */
@@ -57,4 +53,8 @@ section>h3:only-of-type+p:last-child:has(> img:first-child:last-child) {
   /* 画像がはみ出るのを防ぐ（object-fitと組み合わせる） */
   width: 100%;
   display: flex;
+}
+
+@page chapter-cover {
+  background-color: #7f97c222;
 }

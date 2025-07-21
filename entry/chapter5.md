@@ -1,4 +1,4 @@
-## レポートを書こう！
+## レポートを書こう！{#chapter5}
 
 ##
 
@@ -13,19 +13,21 @@
 - ノンブル、柱、ヘッダー、フッター
 - 章のカウンタ
 
-### 出来上がったもの
+### つくったもの
+
+※実装途中のため、画像は仮のものです。現在使えない機能が含まれているかもしれません。
 
 ![](/assets/report-sample/report-sample_01.jpg){style="border:3px solid ###bbb"}
 
-### 出来上がったもの
+### つくったもの
 
 ![](/assets/report-sample/report-sample_02.jpg){style="border:3px solid ###bbb"}
 
-### 出来上がったもの
+### つくったもの
 
 ![](/assets/report-sample/report-sample_03.jpg){style="border:3px solid ###bbb"}
 
-### 出来上がったもの
+### つくったもの
 
 ![](/assets/report-sample/report-sample_04.jpg){style="border:3px solid ###bbb"}
 
@@ -33,26 +35,29 @@
 
 ```md title=sample.md
 ######### 図の挿入
-![traPのロゴ](assets/logo.svg){.fig ###figure-filename}
+![traPのロゴ](assets/logo.svg){.fig #figure-filename}
 
-上の [](###figure-filename){.fig-ref} は、....(略)
+上の [](#figure-filename){data-ref="fig"} は、....(略)
 ```
 
 - class や id を、{} の中に書いて設定できる
 - `figure-filename` は、一意であればなんでも OK
-- マークダウンのリンクを挿入している
+- `[](#figure-filename){data-ref="fig"}` の部分は、Markdown 記法のリンクを挿入している
 
 ### 図・表の挿入/参照
 
-- `fig-ref` は、図の参照を実現するためのクラス
-  - テーマファイルにはおそらく含まれていないため、自分で書く必要がある。先ほどのサイトで紹介されている。
-```css title=style.css
-.fig-ref::after {
+
+```css title=BaseThemeのCSSファイル
+a[data-ref='fig']{
   content: "図" target-counter(attr(href url), vs-counter-fig);
 }
 ```
 
-- `vs-counter-fig` は Vivliostyle の base theme で定義されたカウンタ
+- `data-ref="fig"` は、図の参照を実現するためのdata属性
+  - Base Theme で定義されている。
+- `vs-counter-fig` は Vivliostyle の base theme で定義されたカウンタ。
+- カウンタは、要素に振られるのではなく、その要素を持つ「セクション」でインクリメントされると考えた方が良い。
+- 参照先の要素時点におけるカウンタの値を取得しているイメージ
 
 ### 数式の挿入
 
@@ -72,16 +77,16 @@ $$
 
 </div>
 
-### 紙面の余白
+### 紙面の余白{.image-right}
 
 - ページの余白には、ページ番号や現在の章のタイトルなどを表示する機能
-- 一番理解に時間がかかった
+- 一番理解するのに時間がかかった箇所
 - あとで補足する
+- 右の画像のように、領域に名前が割り振られている。
 
-### 紙面の余白
+<!-- ### 紙面の余白 -->
 
 ![](/assets/report-sample/css-paged-media-test.jpg)
-
 
 ### カウンタ変数の定義
 
@@ -106,3 +111,8 @@ $$
 - 書籍の組版
   - 目次の自動生成
   - 章ごとに異なる位置のツメを付ける
+
+
+# みんなもVivliostyleを使おう！
+
+#
