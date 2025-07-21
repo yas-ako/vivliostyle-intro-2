@@ -8,9 +8,9 @@
 <!-- <div class="vertical-container"> -->
 <strong style="text-align: center;">このスライドもvivliostyleで作りました</strong>
 
-<!-- ![](./assets/vivliostyle-intro-vscode.png){width=800 style="margin-inline: auto;"} -->
+<!-- ![](../assets/vivliostyle-intro-vscode.png){width=800 style="margin-inline: auto;"} -->
 
-<img src="./assets/vivliostyle-intro-vscode.png" width=800px style="margin-inline: auto;">
+<img src="../assets/vivliostyle-intro-vscode.png" width=800px style="margin-inline: auto;">
 
 <!-- </div> -->
 
@@ -36,6 +36,8 @@
 たとえば、 `## こんなかんじに` 書くと
 
 ## こんなかんじに
+
+## 
 
 なります。
 
@@ -109,7 +111,7 @@ CSSの柔軟なセレクタを最大限に活用できるため、
   - 上の二つのセルを見出しに
   - 下の二つのセルを、文章と画像にしているだけ
 
-![](../images/image-right.png)
+![](.../assets/image-right.png)
 
 ### 今回のスライドに関連する資料
 

@@ -6,6 +6,8 @@ ul {
   margin-block-start: 0.5em;
 }
 
+
+
 figure[class*="language-"]>figcaption {
   position: absolute;
   right: 0;
@@ -28,4 +30,31 @@ pre[class*="language-"] {
   line-height: 1.2em;
   background-size: 2.4em 2.4em;
   font-size: 0.8em;
+}
+
+section:has(> h3:only-of-type+p:last-child>img:only-of-type) {
+  display: flex;
+  /* align-items: center; */
+}
+
+section>h3:only-of-type+p:last-child>img:only-of-type {
+  max-height: 7;
+}
+
+section>h3:only-of-type+p:last-child:has(> img:first-child:last-child) {
+  /* imgを囲むp要素にflex-growを適用 */
+  flex-grow: 1;
+  /* 残りのスペースをすべて占める */
+  margin-block: 0.5em;
+  /* p要素のデフォルトのマージンをリセット */
+  display: flex;
+  /* p要素をflexコンテナとしてimgを中央配置するために使用 */
+  justify-content: center;
+  /* 水平方向の中央揃え (必要であれば) */
+  align-items: center;
+  /* 垂直方向の中央揃え (必要であれば) */
+  overflow: hidden;
+  /* 画像がはみ出るのを防ぐ（object-fitと組み合わせる） */
+  width: 100%;
+  display: flex;
 }

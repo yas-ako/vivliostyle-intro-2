@@ -32,7 +32,7 @@ module.exports = {
 - まずは次の記事を6本全部読もう  
   <https://gihyo.jp/list/group/Vivliostyleが拓くCSS組版の可能性>
 
-![](./assets/customize/gihyo.jpg)
+![](../assets/customize/gihyo.jpg)
 
 ### カスタマイズの仕組み
 

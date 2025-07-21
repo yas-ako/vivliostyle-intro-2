@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap');
+
+:root {
+  --vs-theme--color-bg: #fff;
+  --vs-theme--color-body: #000;
+  --vs-theme--section-align-items: start;
+  --vs-theme--section-justify-content: start;
+  --vs-theme--h1-color: #1c3177;
+  --vs-theme--h2-color: #e84e39;
+  --vs-theme--h3-color: #e84e39;
+  --vs-theme--h4-color: #e84e39;
+  --vs-theme--anchor-color: #3498db;
+  --vs-theme--blockquote-mark-color: #d6a;
+  --vs-theme--table-heading-color-bg: rgb(0, 0, 0, 0.1);
+  --vs-theme--page-ref-call-color: forestgreen;
+  --vs-theme--page-ref-call-content: '(p.' target-counter(attr(href url), page) ')';
+  --vs-theme--max-inline-size-on-screen: 40rem;
+  /**
+   *  Styles for cover pages
+   */
+  --vs-theme--cover-page-color-bg: #1c3177;
+  --vs-theme--cover-page-color-body: #fff;
+  --vs-theme--cover-page-align-items: center;
+  --vs-theme--cover-page-justify-content: center;
+  /**
+   * Styles for image full pages
+   */
+  --vs-theme--image-full-page-margin: 0;
+  --vs-theme--image-full-page-object-fit: cover;
+
+  /**
+   * カスタマイズ
+   */
+  --vs-page--mbox-content-top-right: env(pub-title);
+  --vs-font-family: 'Zen Kaku Gothic New', sans-serif;
+  --vs-font-size: 30pt;
+
+  --vs-spacing-rlh: calc(var(--vs-line-height) * 0.3rem);
+  /* --vs-line-height: 1.5; */
+  --vs--heading-margin-block: calc(0.5 * 1rem);
+
+  --vs--h1-font-size: 1.7em;
+  --vs--h2-font-size: 1.7em;
+  --vs--h3-font-size: 1.5em;
+  --vs--h4-font-size: 1.33em;
+  --vs--h5-font-size: 1.17em;
+  --vs--h6-font-size: 1em;
+}
+
+@page {
+  /* size: 256mm 144mm; */
+  size: 1280px 720px;
+}
+
+section:has(h2.author-name) {
+  display: flex;
+  align-items: center;
+}
+
+section:has(h1.chapter-heading) {
+  /* ページのスタイルの名前を呼び出す */
+  page: chapter-heading;
+
+  justify-content: center;
+  counter-increment: slide-chapter;
+  background-color: #7f97c222;
+}
+
+/* ここでページのスタイルに名前をつける */
+@page chapter-heading {
+  background-color: #7f97c222;
+
+  /* チャプターの見出しページだけ、左上のタイトルを表示しない */
+  --vs-page--mbox-content-top-right: none;
+}
+
+section:has(h1.chapter-heading) h1 {
+  /* flex: 1 1 auto; */
+  font-size: 2rem;
+  height: 1.7em;
+  line-height: 1.5em;
+  border-bottom: #7f96c2 10px solid;
+}
+
+section:has(h1.chapter-heading) h1::before {
+  content: counter(slide-chapter) '. ';
+}
+
+/* .cover,
+section:has(> .cover:first-child) {
+  --vs--h1-font-size: 2rem;
+} */
+
+
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: auto;
+  width: 100%;
+}
+
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  width: 100%;
+  /* margin: auto; */
+}
+
+ul li::marker {
+  color: #1c3177;
+}
+
+ul ul li {
+  list-style-type: none;
+  position: relative;
+}
+
+ul ul li::before {
+  content: '';
+  position: absolute;
+  left: -0.8em;
+  top: 0.6em;
+  width: 0.4em;
+  height: 0.4em;
+  border: 4px solid black;
+  background-color: white;
+}
+
+ul ul ul li {
+  list-style-type: none;
+  position: relative;
+}
+
+ul ul ul li::before {
+  content: '';
+  position: absolute;
+  left: -0.8em;
+  top: 0.6em;
+  width: 0.4em;
+  height: 0.4em;
+  background-color: black;
+}
+
+p>img {
+  max-width: 100%;
+  /* 画像がp要素からはみ出さないように */
+  height: 100%;
+  /* p要素の高さに合わせる */
+  object-fit: contain;
+  /* アスペクト比を維持して、要素内に収まるように */
+  display: block;
+  /* img要素の下にできる余白をなくす */
+  margin-inline: auto;
+}
+
+p:has(> img:first-child:last-child) {
+  /* imgを囲むp要素にflex-growを適用 */
+  flex-grow: 1;
+  /* 残りのスペースをすべて占める */
+  margin: 0;
+  /* p要素のデフォルトのマージンをリセット */
+  display: flex;
+  /* p要素をflexコンテナとしてimgを中央配置するために使用 */
+  justify-content: center;
+  /* 水平方向の中央揃え (必要であれば) */
+  align-items: center;
+  /* 垂直方向の中央揃え (必要であれば) */
+  overflow: hidden;
+  /* 画像がはみ出るのを防ぐ（object-fitと組み合わせる） */
+  width: 100%;
+  display: flex;
+}
+
+
+/* img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70%;
+  margin-top: 0.5em;
+  padding: -3em;
+  object-fit: contain;
+  width: auto;
+} */
+
+figure[class*="language-"]>figcaption {
+  /* font-size: 110%; */
+  /* line-height: 1.4em; */
+  border: #1c3177 1px solid;
+  color: #fff;
+  background-color: #1c3177;
+  /* border-bottom: none; */
+  text-align: left;
+  margin: 0 auto 0 0;
+  border-radius: var(--vs-prism--block-code-border-radius) var(--vs-prism--block-code-border-radius) 0 0;
+  padding: 0.3em 0.6em 0.1em;
+  font-family: var(--vs--monospace-font-family);
+  font-weight: bold;
+}
+
+/* コードブロック */
+pre[class*="language-"] {
+  padding-block: 0;
+  padding-inline-start: 0.3em;
+  /* background-color: #fff; */
+  /* background-image: linear-gradient(#efefef6e 50%, #fff 50%); */
+  line-height: 1.5em;
+  background-size: 3em 3em;
+  /* background-origin: content-box; */
+  /* background-attachment: local; */
+  width: 100%;
+  border: 2px solid #1c3177;
+  margin: 0;
+  font-weight: normal;
+  margin-block: 0.2em;
+}
+
+figcaption+pre[class*="language-"] {
+  border-radius: 0 var(--vs-prism--block-code-border-radius) var(--vs-prism--block-code-border-radius) var(--vs-prism--block-code-border-radius);
+  margin-block: 0;
+  margin-right: auto;
+}
+
+/* インラインコード */
+:not(pre)>code {
+  border: 1px solid #888;
+  margin-inline: 0.2em;
+  /* font-weight: 500; */
+  margin-block: 0.2em;
+}
+
+figure:has(>pre) {
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+}
