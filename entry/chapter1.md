@@ -9,7 +9,7 @@
   - HTML/CSS などの Web 技術で組版をする
 - traP Tech Book で、PDF を出力する際に使用している<br>らしい...？
 
-![](../assets/Logo_Mark.png)
+![](./../assets/Logo_Mark.png)
 
 ### 組版とは？{.image-left}
 
@@ -30,11 +30,11 @@
 - お金がかかる
 - 構造化された文章を書くのがつらい
 
-![](../assets/word.png)
+![](./../assets/word.png)
 
 ### 組版ソフトの例：Word{.columns-2}
 
-![](../assets/word_tokikake.png){style="border:1px solid ###bbb"}
+![](./../assets/word_tokikake.png){style="border:1px solid ###bbb"}
 
 <!-- <div class="vertical-container"> -->
 
@@ -44,7 +44,7 @@
 
 <!-- ### 組版ソフトの例：Word -->
 
-![](../assets/word_tokikake_content.png){style="border:1px solid ###bbb"}
+![](./../assets/word_tokikake_content.png){style="border:1px solid ###bbb"}
 
 <!-- <div class="vertical-container"> -->
 
@@ -57,7 +57,7 @@
 - ほとんど使ったことがないので僕はわかりません
 - 組版ソフトウェアのデファクトスタンダードらしい
 
-![](../assets/Adobe_InDesign.png)
+![](./../assets/Adobe_InDesign.png)
 
 ### 組版ソフトの例：その他
 
@@ -71,31 +71,31 @@
 
 <!-- <img src="../assets/powerpoint_poster.jpg" width="350px" style="margin: 0 auto;"> -->
 
-![](../assets/powerpoint_poster.jpg)
+![](./../assets/powerpoint_poster.jpg)
 
 <!-- <img src="../assets/powerpoint_poster.jpg"> -->
 
 ### 組版ソフトの例：？？？{.columns-2}
 
-![](../assets/powerpoint_poster_up.jpg)
+![](./../assets/powerpoint_poster_up.jpg)
 
 <!-- <img src="../assets/powerpoint_poster_up.jpg" width="700px" style="margin: 0 auto;"> -->
 
 <!-- ### 組版ソフトの例：？？？ -->
 
-![](../assets/powerpoint_poster_down.jpg)
+![](./../assets/powerpoint_poster_down.jpg)
 
 <!-- <img src="../assets/powerpoint_poster_down.jpg" width="700px" style="margin: 0 auto;"> -->
 
 ### 組版ソフトの例：PowerPoint
 
-![](../assets/powerpoint_window.jpg)
+![](./../assets/powerpoint_window.jpg)
 
 <!-- <img src="../assets/powerpoint_window.jpg" width="700px" style="margin: 0 auto;"> -->
 
 ### 組版ソフトの例：$\mathrm \TeX$
 
-![](../assets/tex_sample.png)
+![](./../assets/tex_sample.png)
 
 <!-- <img src="../assets/tex_sample.png" width="900px" style="margin: 0 auto; border: 1px solid ###aaa;"> -->
 
@@ -109,7 +109,7 @@
   - 自分で作った CSS ファイル
   - テーマを、自分で書いたCSSファイルで上書きし、自分用にカスタマイズすることができる
 
-![](../assets/vivliostyle_cli.png)
+![](./../assets/vivliostyle_cli.png)
 
 ### Vivliostyle を用いた組版の流れ（出力）
 

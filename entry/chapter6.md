@@ -8,7 +8,7 @@
 <!-- <div class="vertical-container"> -->
 <div style="text-align: center;"><strong>このスライドもvivliostyleで作りました</strong></div>
 
-![](../assets/vivliostyle-intro-vscode.png)
+![](./../assets/vivliostyle-intro-vscode.png)
 
 <!-- {width=800 style="margin-inline: auto;"} -->
 
@@ -138,11 +138,11 @@ CSSの柔軟なセレクタを最大限に活用できるため、
   - 上の二つのセルを見出しに
   - 下の二つのセルを、文章と画像にしているだけ
 
-![](../assets/image-right.png)
+![](./../assets/image-right.png)
 
 ### gridレイアウト
 
-![](../assets/image-right-grid.png)
+![](./../assets/image-right-grid.png)
 
 ### 今回のスライドに関連する資料
 

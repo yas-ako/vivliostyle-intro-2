@@ -12,7 +12,7 @@
   - Web の知識がそのまま使える
   - TeX の数式が書ける()
 
-![](../assets/install/install_simple-report.png)
+![](./../assets/install/install_simple-report.png)
 
 ### Vivliostyle の良い点(2/3)
 
@@ -56,7 +56,7 @@
 
 ### Vivliostyle の良くない点
 
-![](../assets/customize/tsurai.png)
+![](./../assets/customize/tsurai.png)
 
 ### Vivliostyle の良くない点
 
